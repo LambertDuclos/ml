@@ -165,7 +165,8 @@ tired evening. A rule changes in an ordinary `claude` session, without an agent,
 - `courses/<track>/<nn-lesson>/`: `README.md` (video, "Assumes", sittings, what to write),
   `test_*.py` (the assignment), Lambert's implementation file, `explore.py` (molten scratch),
   `notes.md`, `exercises.md`, `ref/` if there was a rung 4. `courses/maths/`: the parallel track,
-  one sitting a week. `courses/detours/`: prior knowledge backfilled on the way ("Gaps").
+  one sitting a week. `courses/vision/`: the track after Zero to Hero. `courses/detours/`: prior
+  knowledge backfilled on the way ("Gaps").
 - `core/`: Lambert's mini-torch, promoted lesson after lesson, tested.
 - `papers/<year>-<name>/`: `notes.md`, `repro.py`, `test_repro.py`, `questions.md`
   (`papers/README.md`).

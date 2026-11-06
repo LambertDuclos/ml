@@ -15,7 +15,7 @@ tutor writes its `README.md`, its `test_*.py` and its plumbing at the end of the
 | 06 | `06-wavenet` | Part 5: Building a WaveNet | hierarchical (dilated) layers; torch.nn-like modules promoted to `core/` |
 | 07 | `07-gpt` | Let's build GPT: from scratch, in code, spelled out | self-attention, the transformer block, a character-level GPT |
 | 08 | `08-tokenizer` | Let's build the GPT Tokenizer | byte-pair encoding, compared with tiktoken |
-| 09 | `09-gpt2-124m` | Let's reproduce GPT-2 (124M) | the full training run; needs a rented GPU |
+| 09 | `09-train-a-vit` | Let's reproduce GPT-2 (124M), watched for the training engineering | a ViT on CIFAR-10 with that lecture's engineering (mixed precision, schedules, data loading, evaluation): the bridge to `courses/vision/` (decision of 6 November 2026, to revisit at lesson 8) |
 
 Each folder: `README.md` (segments, sittings, what to write), `test_<lesson>.py` (the assignment),
 `<lesson>.py` (mine), `explore.py` (my scratch cells, run with molten), `notes.md` (mine, at the

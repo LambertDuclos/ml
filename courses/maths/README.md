@@ -9,7 +9,7 @@ numpy and sympy only to check.
 |---|---|---|---|
 | 01 | `01-linear-algebra` | 2, 3, 4 | projection, power iteration, low-rank approximation (Eckart–Young), least squares |
 | 02 | `02-calculus-and-gradients` | 5 | Jacobians, the chain rule on vectors, gradient checking of a small net |
-| 03 | `03-probability` | 6 | distributions, expectation, maximum likelihood, entropy and KL (where cross-entropy comes from) |
+| 03 | `03-probability` | 6 | distributions, expectation, maximum likelihood, entropy and KL (where cross-entropy comes from), the ELBO (what VAEs and diffusion optimise, for `courses/vision/06-diffusion`) |
 | 04 | `04-optimization` | 7 | gradient descent and its step size, momentum, Adam, on functions I can plot |
 
 Same shape as a course folder: `README.md`, `test_*.py` (the tutor's), my file, `notes.md` with the

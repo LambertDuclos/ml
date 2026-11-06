@@ -3,8 +3,8 @@
 Deep learning from the ground up, built by hand and checked against PyTorch.
 
 This is a learning repository, kept public on purpose. I am working through Andrej Karpathy's
-*Neural Networks: Zero to Hero*, the mathematics behind it, and then papers, towards graduate
-research in foundation models. Every mechanism here (backpropagation, the MLP, batch norm,
+*Neural Networks: Zero to Hero*, the mathematics behind it, then vision and papers, towards
+graduate research in foundation models, vision models in particular. Every mechanism here (backpropagation, the MLP, batch norm,
 attention, the tokenizer) is written by me from scratch. The tests that judge it, and the plumbing
 around it, are written by Claude Code acting as a tutor that never writes the lesson's code.
 
@@ -33,6 +33,7 @@ The tutor's contract and the session protocol are in `CLAUDE.md`.
   `notes.md`, `exercises.md`.
 - `courses/maths/` — linear algebra, calculus, probability, optimisation, from *Mathematics for
   Machine Learning* (Deisenroth, Faisal, Ong), with numerical tests.
+- `courses/vision/` — the track after Zero to Hero: convolutions, ResNet, ViT, CLIP, MAE, diffusion.
 - `core/` — my own small library, promoted lesson after lesson (Linear, BatchNorm, attention…).
 - `papers/` — one folder per paper: notes (claim, method, what is new, what is weak), a
   reproduction of one number, and the questions I would ask the authors.
@@ -56,7 +57,8 @@ uv run pytest                       # everything, including the tutor's own guar
 bin/ml session                      # open a sitting with the tutor (Claude Code)
 ```
 
-Apple M4, PyTorch on MPS. Lessons 0 to 8 run locally; the GPT-2 reproduction needs a rented GPU.
+Apple M4, PyTorch on MPS. Everything on MNIST and CIFAR-10 runs locally; ImageNet-scale needs a
+rented GPU.
 
 ## Acknowledgements
 
