@@ -9,6 +9,12 @@ Write `micrograd.py` here with Karpathy's names (`Value`, `_prev`, `_op`, `_back
 `train` function of your own. Scratch cells go in `explore.py` (molten). `plot.py` is the tutor's:
 `from plot import draw_dot` draws the expression graph as in the video.
 
+**Assumes:** lesson 0 (derivatives, the chain rule); Python classes and operator overloading
+(`__add__`, `__mul__`, and the reflected `__radd__`, `__rmul__` that make `2 * a` work); a function
+defined inside another that remembers the variables around it (a closure, which is what each
+`_backward` is); recursion (the topological sort); Python sets. Ask for a detour on any of these
+before sitting 1 (`CLAUDE.md`, "Gaps").
+
 | Sitting | Test | Watch first | Then build, video closed |
 |---|---|---|---|
 | 1 | `test_forward` | 0:00 → 0:40 (derivatives by hand, the `Value` object, the graph) | `Value` with `+ - * / **`, `neg`, `tanh`, `exp`, and the right-hand forms (`2 * a`, `1 - a`) |

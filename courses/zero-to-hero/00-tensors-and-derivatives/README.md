@@ -4,6 +4,10 @@ No lecture: the prerequisite the course assumes. Write `tensors.py` here with pl
 `math`, no numpy inside it; the tests judge you against numpy and torch. Scratch cells go in
 `explore.py` (molten: `<leader>mi` to start the `ml` kernel, `<leader>mvip` to run a paragraph).
 
+**Assumes:** Python functions, loops, lists and tuples; high-school algebra (powers, and what tanh,
+exp and log are as functions). Nothing else: this lesson is the floor. If one of these is not
+there, say "gap" before sitting 1 (`CLAUDE.md`, "Gaps").
+
 | Sitting | Tests | Before writing |
 |---|---|---|
 | 1 | `test_broadcast_shape`, `test_matmul_by_hand` | numpy's broadcasting rules, read once: https://numpy.org/doc/stable/user/basics.broadcasting.html. 3Blue1Brown, *Essence of Linear Algebra*, ch. 4 (matrix multiplication as composition). |

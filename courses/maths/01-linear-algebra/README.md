@@ -4,6 +4,9 @@ MML chapters 2 (linear algebra), 3 (analytic geometry), 4 (matrix decompositions
 3Blue1Brown, *Essence of Linear Algebra*. Write `linalg.py` here; numpy is allowed for the primitives
 (`@`, `np.linalg.svd`, `np.linalg.solve`): the point is the construction, not reimplementing LAPACK.
 
+**Assumes:** vectors and the dot product, matrix multiplication (lesson 0), numpy indexing basics.
+Eigenvectors and the SVD are what you learn here, not what you need coming in.
+
 | Sitting | Tests | Read first |
 |---|---|---|
 | 1 | `test_projection`, `test_power_iteration` | MML §3.8 (projections), §4.2 (eigenvalues and eigenvectors); 3Blue1Brown ch. 14. Derive the projection from "the residual is orthogonal to u". |

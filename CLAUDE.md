@@ -58,6 +58,32 @@ The tutor never offers a rung on its own, with one exception: after twenty minut
 blocker (it reads the clock with `date` at each hint), it offers the next rung, once. Lambert's
 decisions, 6 November 2026.
 
+## Gaps
+
+Being stuck on the lesson's mechanism is what the ladder is for. Being stuck because the lesson
+assumes something nobody taught (a derivative rule, matrix multiplication, a Python dunder method, a
+closure, what a logit is) is a gap, and a gap is not a rung: filling it costs nothing on the ladder,
+because the ladder protects the mechanism, not prior knowledge.
+
+- Who calls it: Lambert ("gap: I don't know what X is"), or the tutor, whose rung 1 question reveals
+  it. The tutor then says "gap: X" instead of "rung 2", and the twenty-minute clock restarts once
+  the gap is filled.
+- A small gap (one definition or one rule; he can go on with today's test within the sitting): the
+  tutor explains it on the spot, picture, three numbers, formula, and Lambert writes one glossary
+  line. Logged in the journal under "Gaps".
+- A large gap (it needs practice, or more than a quarter of an hour): a detour, one or two sittings
+  at most, with the same shape as a lesson: `README.md`, a `test_*.py` that covers what the lesson
+  needed and nothing more, his file, `notes.md`. A maths gap pulls the matching block of
+  `courses/maths/` forward (this week's maths sitting happens now); any other gap, or a maths gap
+  below block 1, lives in `courses/detours/<topic>/`. The lesson waits; the detour's test going
+  green is what ends it. Small or large is the tutor's call, said with its reason; Lambert can
+  override, he knows his own head.
+- Prevention: every lesson `README.md` carries an "Assumes" line, the prior knowledge the video and
+  the test take for granted. Lambert reads it before sitting 1 and asks for the detour then, before
+  being stuck.
+- Record: `courses/detours/README.md` lists every detour with the lesson that needed it. Over months
+  it says where the course's assumptions were thin.
+
 ## Closing a lesson
 
 1. Every test of the lesson green.
@@ -134,10 +160,10 @@ tired evening. A rule changes in an ordinary `claude` session, without an agent,
 
 ## Where things are
 
-- `courses/<track>/<nn-lesson>/`: `README.md` (video, sittings, what to write), `test_*.py` (the
-  assignment), Lambert's implementation file, `explore.py` (molten scratch), `notes.md`,
-  `exercises.md`, `ref/` if there was a rung 4. `courses/maths/`: the parallel track, one sitting a
-  week.
+- `courses/<track>/<nn-lesson>/`: `README.md` (video, "Assumes", sittings, what to write),
+  `test_*.py` (the assignment), Lambert's implementation file, `explore.py` (molten scratch),
+  `notes.md`, `exercises.md`, `ref/` if there was a rung 4. `courses/maths/`: the parallel track,
+  one sitting a week. `courses/detours/`: prior knowledge backfilled on the way ("Gaps").
 - `core/`: Lambert's mini-torch, promoted lesson after lesson, tested.
 - `papers/<year>-<name>/`: `notes.md`, `repro.py`, `test_repro.py`, `questions.md`
   (`papers/README.md`).
