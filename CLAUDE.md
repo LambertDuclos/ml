@@ -141,8 +141,10 @@ because the ladder protects the mechanism, not prior knowledge.
   `<lesson>: <what the green test proves> (<n>/<total>)`, plus the attribution lines Claude Code
   requires. `uv run ruff format` on what changed, before.
 - One branch, `main`. No PRs, no CI: nothing here is production.
-- Public repo. Open point as of 6 November 2026: the GitHub account that hosts it; nothing is pushed
-  until Lambert names it.
+- Public repo: https://github.com/LambertDuclos/ml, Lambert's personal account (his decision,
+  6 November 2026). The tutor pushes after each commit. This repo's pushes fetch that account's
+  token from `gh` by name (a local `credential.helper` in `.git/config`), so they do not depend on
+  which `gh` account is active on the machine.
 
 ## Writing code
 

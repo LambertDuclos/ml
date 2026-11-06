@@ -116,7 +116,7 @@ framing nor Lambert's.
 3. `uv run ruff format` on what changed, his files included (formatting is not code).
 4. The commit: `git add` the lesson's and the root's changed files, an English message
    `<lesson>: <what the green test proves> (<n>/<total>)`, then the attribution lines Claude Code
-   requires. Nothing is pushed until the GitHub account is named in the journal.
+   requires, then `git push`.
 
 No clock: you never tell him it is time to stop.
 
