@@ -1,0 +1,32 @@
+[project]
+name = "ml"
+version = "0.1.0"
+description = "Deep learning from the ground up: Karpathy's Zero to Hero, the maths behind it, and paper reproductions, built by hand and checked against PyTorch."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "torch>=2.15",
+    "numpy>=2.5",
+    "matplotlib>=3.10",
+    "sympy>=1.14",
+    "graphviz>=0.21",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ipykernel>=6",
+    "debugpy>=1.8",
+    "ruff>=0.14",
+]
+
+[tool.pytest.ini_options]
+# The lesson folders are not packages: pytest puts each test file's folder on sys.path, so a test
+# does `from micrograd import Value`. Rebuilds reuse the same test file names and would collide, so
+# they run on their own: `uv run pytest rebuilds/<folder>`.
+testpaths = ["courses", "core", "papers", "tests"]
+norecursedirs = ["rebuilds", "ref", "data", ".venv", ".claude", "bin"]
+addopts = "-p no:cacheprovider"
+
+[tool.ruff]
+line-length = 100

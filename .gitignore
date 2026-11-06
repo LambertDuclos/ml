@@ -1,0 +1,24 @@
+# environment
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# data and checkpoints: downloaded by each lesson's data.py, never committed
+data/*
+!data/README.md
+*.pt
+*.pth
+*.bin
+*.safetensors
+runs/
+wandb/
+
+# notebooks are not kept: scratch cells live in explore.py (molten)
+*.ipynb
+.ipynb_checkpoints/
+
+# local only
+.claude/settings.local.json
+.DS_Store

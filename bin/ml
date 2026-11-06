@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# ml : les gestes du dépôt d'apprentissage (CLAUDE.md, « La séance »).
+#   ml seance [mot…]   ouvre la séance du jour avec le tuteur ; les mots suivent « Ouvre la séance. »
+#   ml tests [arg…]    uv run pytest, tout le dépôt ou ce qu'on lui donne
+# Le tuteur se lance comme l'ingénieur d'equipe : --effort sur la ligne (sous --agent, le champ effort
+# de l'en-tête ne vaut pas pour la session principale), --permission-mode auto, --autocompact 300k.
+# ML_SEANCE=1 ferme la méthode au tuteur (CLAUDE.md, « Changer la méthode »).
+set -euo pipefail
+
+racine="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+usage() {
+  sed -n '2,4p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//'
+}
+
+case "${1:-}" in
+  seance)
+    shift
+    cd "$racine"
+    export ML_SEANCE=1
+    exec claude --agent tuteur --effort xhigh \
+      --settings .claude/tuteur.settings.json --permission-mode auto \
+      --name "ml-$(date +%F)" --autocompact 300k \
+      "Ouvre la séance. $*"
+    ;;
+  tests)
+    shift
+    cd "$racine"
+    exec uv run pytest "$@"
+    ;;
+  -h|--help|"")
+    usage
+    ;;
+  *)
+    echo "ml : geste inconnu « $1 »" >&2
+    usage >&2
+    exit 64
+    ;;
+esac
