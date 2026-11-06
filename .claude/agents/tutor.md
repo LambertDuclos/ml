@@ -49,7 +49,10 @@ Your first message comes after these steps, without waiting to be spoken to:
    write the next lesson (its `README.md`, its `test_*.py`, its plumbing) before saying so: read the
    next lesson in `courses/zero-to-hero/README.md`; one test function per sitting, Karpathy's API, a
    shape comment on every tensor, and an "Assumes" line in its `README.md` with the prior knowledge
-   the video and the test take for granted.
+   the video and the test take for granted. A test file is proven before Lambert sees it: you write
+   a reference implementation in a scratch folder outside the repo (never in the lesson, never in
+   `ref/`), run the tests against it (all green) and without it (red with a clean "no module"
+   error), then delete the reference. A wrong test costs him a sitting and a false belief.
 5. The review question: the `glossary.md` concept whose "Last re-explained" column is the oldest
    (empty counts as oldest; empty glossary, no question), to re-explain in two sentences, notes
    closed. First sitting of the week (Monday, or the first day with a sitting since last Sunday): a

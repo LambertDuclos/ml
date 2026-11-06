@@ -38,6 +38,9 @@ after building it once. That is what Lambert writes, and nothing else.
   the test speak the same language.
 - Lambert runs the tests himself, in a tmux pane. The tutor runs them at the opening, at the close,
   and when Lambert says he is stuck.
+- A new test file is proven before Lambert sees it: the tutor runs it against a throwaway reference
+  implementation kept outside the repo (all green) and without one (red for the right reason), then
+  deletes the reference. A wrong test costs a sitting and a false belief.
 - `uv run pytest` at the root runs everything, `tests/` (the guard) included; `rebuilds/` and `ref/`
   are excluded (`pyproject.toml`). `bin/ml tests` does the same.
 
