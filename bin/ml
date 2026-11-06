@@ -1,38 +1,38 @@
 #!/usr/bin/env bash
-# ml : les gestes du dépôt d'apprentissage (CLAUDE.md, « La séance »).
-#   ml seance [mot…]   ouvre la séance du jour avec le tuteur ; les mots suivent « Ouvre la séance. »
-#   ml tests [arg…]    uv run pytest, tout le dépôt ou ce qu'on lui donne
-# Le tuteur se lance comme l'ingénieur d'equipe : --effort sur la ligne (sous --agent, le champ effort
-# de l'en-tête ne vaut pas pour la session principale), --permission-mode auto, --autocompact 300k.
-# ML_SEANCE=1 ferme la méthode au tuteur (CLAUDE.md, « Changer la méthode »).
+# ml: the gestures of the learning repo (CLAUDE.md, "The session").
+#   ml session [words…]   opens today's sitting with the tutor; the words follow "Open the session."
+#   ml tests [args…]      uv run pytest, the whole repo or what you give it
+# The tutor is launched like equipe's engineer: --effort on the command line (under --agent, the
+# header's effort field does not apply to the main session), --permission-mode auto, --autocompact
+# 300k. ML_SESSION=1 closes the method to the tutor (CLAUDE.md, "Changing the method").
 set -euo pipefail
 
-racine="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 usage() {
   sed -n '2,4p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//'
 }
 
 case "${1:-}" in
-  seance)
+  session)
     shift
-    cd "$racine"
-    export ML_SEANCE=1
-    exec claude --agent tuteur --effort xhigh \
-      --settings .claude/tuteur.settings.json --permission-mode auto \
+    cd "$root"
+    export ML_SESSION=1
+    exec claude --agent tutor --effort xhigh \
+      --settings .claude/tutor.settings.json --permission-mode auto \
       --name "ml-$(date +%F)" --autocompact 300k \
-      "Ouvre la séance. $*"
+      "Open the session. $*"
     ;;
   tests)
     shift
-    cd "$racine"
+    cd "$root"
     exec uv run pytest "$@"
     ;;
   -h|--help|"")
     usage
     ;;
   *)
-    echo "ml : geste inconnu « $1 »" >&2
+    echo "ml: unknown gesture '$1'" >&2
     usage >&2
     exit 64
     ;;

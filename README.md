@@ -24,8 +24,7 @@ One loop per lesson:
 5. Daily: re-explain the concept I have not touched for longest. Monthly: rebuild an earlier lesson
    blind in thirty minutes.
 
-The tutor's contract and the session protocol are in `CLAUDE.md`, in French like the rest of my
-working setup. What a reader sees, the code, the notes and the glossary, is in English.
+The tutor's contract and the session protocol are in `CLAUDE.md`.
 
 ## Map
 
@@ -54,7 +53,7 @@ working setup. What a reader sees, the code, the notes and the glossary, is in E
 brew install graphviz imagemagick   # expression graphs; inline plots in neovim
 uv sync                             # Python 3.14, torch, numpy, matplotlib, sympy, pytest
 uv run pytest                       # everything, including the tutor's own guard
-bin/ml seance                       # open a sitting with the tutor (Claude Code)
+bin/ml session                      # open a sitting with the tutor (Claude Code)
 ```
 
 Apple M4, PyTorch on MPS. Lessons 0 to 8 run locally; the GPT-2 reproduction needs a rented GPU.
