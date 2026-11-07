@@ -19,9 +19,10 @@ import torch
 
 
 def test_broadcast_shape():
-    """`broadcast_shape(a, b)` takes two shapes (tuples of ints) and returns the broadcast shape by
-    numpy's rule: align from the right; each pair of sizes must be equal, or one of them must be 1,
-    and the result takes the larger. Raise ValueError when they cannot broadcast."""
+    """`broadcast_shape(a, b)` takes two shapes (tuples of ints) and returns the broadcast shape, a
+    tuple too (a list never equals a tuple in Python), by numpy's rule: align from the right; each
+    pair of sizes must be equal, or one of them must be 1, and the result takes the larger. Raise
+    ValueError when they cannot broadcast."""
     from tensors import broadcast_shape
 
     cases = [

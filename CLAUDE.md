@@ -175,6 +175,7 @@ tired evening. A rule changes in an ordinary `claude` session, without an agent,
   (`papers/README.md`).
 - `rebuilds/<lesson>-<YYYY-MM>/`: the monthly rebuilds.
 - `glossary.md`, `questions.md`: the two files that review and tangents feed.
+- `HOWTO.md`: every command, from setup to debugging; the hands-on manual beside this contract.
 - `.claude/agents/`: tutor (main session), examiner, critic. `.claude/hooks/guard.py` and its test
   `tests/test_guard.py`. `bin/ml`: `session`, `tests`.
 - Outside the repo: `~/notes/projets/ml/` (the journal, the critic's reports).

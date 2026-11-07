@@ -24,7 +24,8 @@ One loop per lesson:
 5. Daily: re-explain the concept I have not touched for longest. Monthly: rebuild an earlier lesson
    blind in thirty minutes.
 
-The tutor's contract and the session protocol are in `CLAUDE.md`.
+The tutor's contract and the session protocol are in `CLAUDE.md`; every command, from setup to
+debugging, is in `HOWTO.md`.
 
 ## Map
 
